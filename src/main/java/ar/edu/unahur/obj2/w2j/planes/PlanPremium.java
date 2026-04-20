@@ -2,8 +2,7 @@ package ar.edu.unahur.obj2.w2j.planes;
 
 public class PlanPremium extends PlanesDeSucripcion {
 
-    public PlanPremium( Usuario unUsuario) {
-        super(unUsuario);
+    public PlanPremium() {
     }
     
     @Override

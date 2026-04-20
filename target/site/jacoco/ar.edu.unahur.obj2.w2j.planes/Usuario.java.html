@@ -14,26 +14,31 @@ public class Usuario {
     public List&lt;Contenido&gt; getContenidoVisto() {
 <span class="nc" id="L15">        return contenidoVisto;</span>
     }
-
+    public Double costoDelPlan(){
+<span class="nc" id="L18">        return plan.costo();</span>
+    }
+    public void vaciarContenido(){
+<span class="nc" id="L21">        contenidoVisto.clear();</span>
+<span class="nc" id="L22">    }</span>
     public void addContenidoVisto(Contenido unContenido) {
-<span class="nc" id="L19">        contenidoVisto.add(unContenido);</span>
-<span class="nc" id="L20">    }</span>
+<span class="nc" id="L24">        contenidoVisto.add(unContenido);</span>
+<span class="nc" id="L25">    }</span>
 
     public PlanesDeSucripcion getPlan() {
-<span class="nc" id="L23">        return plan;</span>
+<span class="nc" id="L28">        return plan;</span>
     }
 
     public void setPlan(PlanesDeSucripcion plan) {
-<span class="nc" id="L27">        this.plan = plan;</span>
-<span class="nc" id="L28">    }</span>
+<span class="nc" id="L32">        this.plan = plan;</span>
+<span class="nc" id="L33">    }</span>
     public Integer canVistas(){
-<span class="nc" id="L30">        return contenidoVisto.size();</span>
+<span class="nc" id="L35">        return contenidoVisto.size();</span>
     }
     public List&lt;Contenido&gt; excedentesDelPlan(Integer limite){
-<span class="nc" id="L33">        return contenidoVisto.stream().skip(limite).toList();</span>
+<span class="nc" id="L38">        return contenidoVisto.stream().skip(limite).toList();</span>
                 //contenidos.subList(limite,contenidoVisto.size())
     }
-  
+    
     
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

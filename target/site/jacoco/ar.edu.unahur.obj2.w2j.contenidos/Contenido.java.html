@@ -2,7 +2,7 @@
 
 public abstract class Contenido {
     private String titulo;
-    protected Double costoBase; //correjir el protected.
+    private Double costoBase; //correjir el protected.
     
 <span class="fc" id="L7">    public Contenido(String titulo, Double costoBase) {</span>
 <span class="fc" id="L8">        this.titulo = titulo;</span>
@@ -23,7 +23,7 @@ public abstract class Contenido {
     public Double costo(){
 <span class="fc" id="L24">        return costoBase + this.doCosto(); //template metodo,  plantilla + metodo abstracto</span>
     }
-    public abstract Double doCosto();
+    public abstract Double doCosto(); //abstract method
     
 
 }

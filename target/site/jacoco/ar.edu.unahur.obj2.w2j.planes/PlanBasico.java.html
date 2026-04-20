@@ -2,22 +2,27 @@
 
 public class PlanBasico extends PlanesDeSucripcion {
     private  Integer limite; 
-    public PlanBasico( Double unCostoFIjo , Usuario unUsuario,Integer unLimite) {
-<span class="nc" id="L6">        super(unCostoFIjo, unUsuario);</span>
+    public PlanBasico( Usuario unUsuario,Integer unLimite) {
+<span class="nc" id="L6">        super( unUsuario);</span>
 <span class="nc" id="L7">        limite =unLimite;</span>
 <span class="nc" id="L8">    }</span>
 
      @Override
     public Double getCostoMensal(Usuario unUusario) {
-<span class="nc" id="L12">        return costoFijo + this.costoaAdicionalAlContenido(unUusario) ;</span>
+<span class="nc" id="L12">        return costoaAdicionalAlContenido(unUusario) ;</span>
     }  
+    
+    @Override
+    public Double costoFijo() {
+<span class="nc" id="L17">        return 5.0;</span>
+    }
 
     public Double costoaAdicionalAlContenido( Usuario unUusario ) {
-<span class="nc bnc" id="L16" title="All 2 branches missed.">        if( unUusario.canVistas() &gt; limite ){</span>
-<span class="nc" id="L17">            return unUusario.excedentesDelPlan(limite).stream().mapToDouble( e -&gt; e.doCosto()).sum();</span>
+<span class="nc bnc" id="L21" title="All 2 branches missed.">        if( unUusario.canVistas() &gt; limite ){</span>
+<span class="nc" id="L22">            return unUusario.excedentesDelPlan(limite).stream().mapToDouble( e -&gt; e.costo()).sum();</span>
         }
         else{
-<span class="nc" id="L20">            return 0.0;</span>
+<span class="nc" id="L25">            return 0.0;</span>
         }
     }
 

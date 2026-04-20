@@ -14,7 +14,7 @@ public class Series extends Contenido{
     
     @Override
     public Double doCosto(){ // e. costo 
-<span class="nc" id="L17">        return costoBase + temporada.stream().mapToDouble(e -&gt; e.costo()).average().orElse(0) ;</span>
+<span class="nc" id="L17">        return temporada.stream().mapToDouble(e -&gt; e.costo()).average().orElse(0) ;</span>
     }
 
     public void setTemporada(List&lt;Temporada&gt; temporada) {

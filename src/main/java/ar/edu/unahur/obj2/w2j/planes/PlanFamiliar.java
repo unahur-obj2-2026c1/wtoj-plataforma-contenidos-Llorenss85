@@ -1,7 +1,7 @@
 package ar.edu.unahur.obj2.w2j.planes;
 public class PlanFamiliar extends PlanBasico {
-    public PlanFamiliar( Usuario unUsuario, Integer unLimite) {
-        super( unUsuario, unLimite);
+    public PlanFamiliar(  Integer unLimite) {
+        super(unLimite);
         
     }
     

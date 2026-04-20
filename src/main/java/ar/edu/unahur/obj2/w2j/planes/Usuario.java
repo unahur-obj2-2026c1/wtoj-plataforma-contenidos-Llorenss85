@@ -15,7 +15,7 @@ public class Usuario {
         return contenidoVisto;
     }
     public Double costoDelPlan(){
-        return plan.costo();
+        return plan.costo(this);
     }
     public void vaciarContenido(){
         contenidoVisto.clear();

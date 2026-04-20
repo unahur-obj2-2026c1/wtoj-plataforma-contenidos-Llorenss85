@@ -2,13 +2,18 @@
 
 public class PlanPremium extends PlanesDeSucripcion {
 
-    public PlanPremium(Double unCostoFIjo , Usuario unUsuario) {
-<span class="nc" id="L6">        super(unCostoFIjo,unUsuario);</span>
+    public PlanPremium( Usuario unUsuario) {
+<span class="nc" id="L6">        super(unUsuario);</span>
 <span class="nc" id="L7">    }</span>
+    
+    @Override
+    public Double costoFijo() {
+<span class="nc" id="L11">        return 12.0;</span>
+    }
 
     @Override
     public Double getCostoMensal(Usuario unUusario) {
-<span class="nc" id="L11">        return costoFijo;</span>
+<span class="nc" id="L16">        return 0.0;</span>
     }
     
     

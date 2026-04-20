@@ -2,8 +2,7 @@ package ar.edu.unahur.obj2.w2j.planes;
 
 public class PlanBasico extends PlanesDeSucripcion {
     private  Integer limite; 
-    public PlanBasico( Usuario unUsuario,Integer unLimite) {
-        super( unUsuario);
+    public PlanBasico( Integer unLimite) {
         limite =unLimite;
     }
 

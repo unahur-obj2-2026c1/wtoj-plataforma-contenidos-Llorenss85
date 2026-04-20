@@ -1,13 +1,10 @@
 package ar.edu.unahur.obj2.w2j.planes;
 
 public abstract class PlanesDeSucripcion {
-    private Double costoFijo;
-    private Usuario usuario; 
-    public PlanesDeSucripcion(Usuario unUsuario) {
-        usuario = unUsuario;
+    public PlanesDeSucripcion() {;
     }
 
-    public Double costo(){
+    public Double costo(Usuario usuario){
         return this.costoFijo() + this.getCostoMensal(usuario);
     }
     public abstract Double costoFijo(); //dato fijo 
